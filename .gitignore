@@ -1,2 +1,4 @@
 # Visual SourceSafe
 *.scc
+build.xml
+*.bat

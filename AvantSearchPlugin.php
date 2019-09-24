@@ -70,6 +70,9 @@ class AvantSearchPlugin extends Omeka_Plugin_AbstractPlugin
 
     public function hookInitialize()
     {
+        // Enable translations
+        add_translation_source(dirname(__FILE__) . '/languages');
+
         // Register the dispatch filter controller plugin.
         $front = Zend_Controller_Front::getInstance();
         $front->registerPlugin(new AvantSearch_Controller_Plugin_DispatchFilter);

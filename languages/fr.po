@@ -1,0 +1,456 @@
+# Translation for the Fusion theme for Omeka.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Omeka package.
+# José-Nicolas Binette <biguenique@gmail.com>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Omeka-theme-Fusion\n"
+"Report-Msgid-Bugs-To: https://fusionjeunesse.org\n"
+"POT-Creation-Date: 2019-08-06 15:30+0200\n"
+"PO-Revision-Date: 2019-09-23 20:16-0400\n"
+"Language-Team: Français <farseneau@fusionjeunesse.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.3\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr\n"
+
+#: config_form.php:53
+msgid "Show the option to limit keyword searching to Title text."
+msgstr ""
+"Montrer l'option pour limiter la recherche de mot-clé au texte du titre."
+
+#: config_form.php:66
+msgid "Customization of columns in Table View search results."
+msgstr ""
+"Personnalisation des colonnes dans les résultats de recherche Table View."
+
+#: config_form.php:76
+msgid "Layout definitions."
+msgstr "Définitions de mise en page."
+
+#: config_form.php:86
+msgid "The width of the layout selector dropdown."
+msgstr "La largeur du déroulant du sélecteur de mise en page."
+
+#: config_form.php:97
+msgid "Detail layout elements."
+msgstr "Détailler les éléments de mise en page."
+
+#: config_form.php:107
+msgid "Elements that can be used as the Index View field."
+msgstr "Éléments qui peuvent être utilisés comme champ de vue d'index."
+
+#: config_form.php:117
+msgid "Elements that can be used as the Tree View field."
+msgstr ""
+"Éléments qui peuvent être utilisés comme champ de vue d'arborescence."
+
+#: config_form.php:128
+msgid "Show the option to display results in Relationships View."
+msgstr ""
+"Afficher l'option d'affichage des résultats dans la vue des relations."
+
+#: config_form.php:141
+msgid "Elements that contain hierarchical values."
+msgstr "Éléments qui contiennent des valeurs hiérarchiques."
+
+#: config_form.php:151
+msgid "Columns that should be sorted as integers."
+msgstr "Colonnes qui devraient être triées comme des entiers."
+
+#: config_form.php:162
+msgid "Sort street addresses by street name, then by street number."
+msgstr "Trier les adresses par nom de rue, puis par numéro de rue."
+
+#: models\SearchConfig.php:3
+msgid "Address Sorting"
+msgstr "Tri des adresses"
+
+#: models\SearchConfig.php:4
+msgid "Columns"
+msgstr "Colonnes"
+
+#: models\SearchConfig.php:5
+msgid "Detail Layout"
+msgstr "Mise en page détaillée"
+
+#: models\SearchConfig.php:6 models\SearchResultsViewFactory.php:67
+msgid "Index View"
+msgstr "Vue d'index"
+
+#: models\SearchConfig.php:7
+msgid "Integer Sorting"
+msgstr "Triage d'entiers"
+
+#: models\SearchConfig.php:8
+msgid "Layouts"
+msgstr "Mise en page"
+
+#: models\SearchConfig.php:9
+msgid "Layout Selector Width"
+msgstr "Largeur du sélecteur de mise en page"
+
+#: models\SearchConfig.php:10 models\SearchResultsViewFactory.php:76
+#: views\public\relationships-view.php:28
+msgid "Relationships View"
+msgstr "Vue des relations"
+
+#: models\SearchConfig.php:11
+msgid "Hierarchies"
+msgstr "Hiérarchies"
+
+#: models\SearchConfig.php:12
+msgid "Titles Only"
+msgstr "Titres seulement"
+
+#: models\SearchConfig.php:13 models\SearchResultsViewFactory.php:70
+msgid "Tree View"
+msgstr "Vue d'arborescence"
+
+#: models\SearchConfig.php:31
+#, php-format
+msgid ""
+"This installation uses the %s storage engine for keyword searching.</br>"
+msgstr ""
+"Cette installation utilise le moteur de stockage %s pour la recherche par "
+"mot-clé.</br>"
+
+#: models\SearchConfig.php:33
+msgid "Learn more."
+msgstr "En savoir plus."
+
+#: models\SearchConfig.php:420
+#, php-format
+msgid "'%s' is not a valid alignment. Options: %s."
+msgstr "'%s' n'est pas un alignement valide. Options : %s."
+
+#: models\SearchConfig.php:477
+msgid "No display option specified."
+msgstr "Aucune option d'affichage n'est spécifiée."
+
+#: models\SearchConfig.php:483
+#, php-format
+msgid "'%s' is not a valid display option. Options: %s."
+msgstr "'%s' n'est pas une option d'affichage valide. Options : %s."
+
+#: models\SearchConfig.php:535
+#, php-format
+msgid ""
+"'%s' is not a valid layout Id. Specify 'L' followed by an integer greater "
+"than 0."
+msgstr ""
+"'%s' n'est pas un identifiant de mise en page valide. Spécifier 'L' suivi "
+"d'un entier supérieur à 0."
+
+#: models\SearchConfig.php:540
+#, php-format
+msgid "Layouts: 'L%s' is specified twice."
+msgstr "Les mises en page : 'L%s' est spécifié deux fois."
+
+#: models\SearchConfig.php:547
+#, php-format
+msgid "Syntax error at '%s'. Only 'admin' is allowed after the layout name."
+msgstr ""
+"Erreur de syntaxe à '%s'. Seul 'admin' est autorisé après le nom du layout."
+
+#: models\SearchConfig.php:558
+#, php-format
+msgid "'%s' is not an element."
+msgstr "'%s' n'est pas un élément."
+
+#: models\SearchConfig.php:570
+msgid "Layout Selector Width must be an integer value of 100 or greater."
+msgstr ""
+"La largeur du sélecteur de disposition doit être un nombre entier égal ou "
+"supérieur à 100."
+
+#: models\SearchResultsFilters.php:22 models\SearchResultsFilters.php:97
+#: views\public\find\advanced-search.php:93
+msgid "AND"
+msgstr "ET"
+
+#: models\SearchResultsFilters.php:22 models\SearchResultsFilters.php:93
+#: views\public\find\advanced-search.php:94
+msgid "OR"
+msgstr "OU"
+
+#: models\SearchResultsFilters.php:62 models\SearchResultsFilters.php:144
+#: views\public\find\advanced-search.php:38
+msgid "Keywords"
+msgstr "Mots-clés"
+
+#: models\SearchResultsFilters.php:82
+msgid "type"
+msgstr "type"
+
+#: models\SearchResultsFilters.php:116
+msgid "Date Range"
+msgstr "Période de temps"
+
+#: models\SearchResultsFilters.php:118
+msgid "'Date equal to or after'"
+msgstr "'Date égale ou supérieure à'"
+
+#: models\SearchResultsFilters.php:120
+msgid "'Date equal to or before"
+msgstr "'Date égale ou antérieure à"
+
+#: models\SearchResultsFilters.php:127
+#, php-format
+msgid "Sorted by %s"
+msgstr "Trié par %s"
+
+#: models\SearchResultsFilters.php:132
+msgid "(only showing items with images or files)"
+msgstr "(n'affichant que des éléments avec des images ou des fichiers)"
+
+#: models\SearchResultsFilters.php:146
+msgid "in"
+msgstr "dans"
+
+#: models\SearchResultsFilters.php:146
+msgid "titles only"
+msgstr "titres seulement"
+
+#: models\SearchResultsFilters.php:162
+msgid "No search filters"
+msgstr "Aucun filtre de recherche"
+
+#: models\SearchResultsTableViewRowData.php:72
+#: views\public\table-view-script.php:108
+msgid "show more"
+msgstr "montrer davantage"
+
+#: models\SearchResultsTableViewRowData.php:191
+#: views\public\find\advanced-search.php:151
+msgid "Tags"
+msgstr "Étiquettes (mots-clics)"
+
+#: models\SearchResultsView.php:158
+msgid "Modify Search"
+msgstr "Modifier la recherche"
+
+#: models\SearchResultsView.php:183
+msgid "Select Below"
+msgstr "Sélectionnez ci-dessous"
+
+#: models\SearchResultsView.php:193
+msgid "Public Fields"
+msgstr "Champs publics"
+
+#: models\SearchResultsView.php:198
+msgid "Admin Fields"
+msgstr "Champs Admin"
+
+#: models\SearchResultsView.php:247
+msgid "All items"
+msgstr "Tous les contenus"
+
+#: models\SearchResultsView.php:248
+msgid "Only items with images or files"
+msgstr "Uniquement les contenus avec des images ou des fichiers"
+
+#: models\SearchResultsView.php:296
+msgid "All words"
+msgstr "Tous les mots"
+
+#: models\SearchResultsView.php:297 views\public\find\advanced-search.php:116
+msgid "Contains"
+msgstr "Contient"
+
+#: models\SearchResultsView.php:298
+msgid "Boolean"
+msgstr "Booléen"
+
+#: models\SearchResultsView.php:305
+msgid "All fields"
+msgstr "Tous les champs"
+
+#: models\SearchResultsView.php:306
+msgid "Titles only"
+msgstr "Titres seulement"
+
+#: models\SearchResultsView.php:352
+msgid "item found"
+msgstr "contenu trouvé"
+
+#: models\SearchResultsView.php:352
+msgid "items found"
+msgstr "contenus trouvés"
+
+#: models\SearchResultsViewFactory.php:63
+msgid "Table View"
+msgstr "Vue tableau"
+
+#: models\SearchResultsViewFactory.php:64 views\public\image-view.php:17
+msgid "Image View"
+msgstr "Vue image"
+
+#: views\public\common\pagination_control.php:5
+msgid "Pagination"
+msgstr "Pagination"
+
+#: views\public\common\pagination_control.php:11
+msgid "Previous Page"
+msgstr "Page précédente"
+
+#: views\public\common\pagination_control.php:36
+msgid "Current Page"
+msgstr "Page actuelle"
+
+#: views\public\common\pagination_control.php:39
+#, php-format
+msgid "%s of %s"
+msgstr "%s de %s"
+
+#: views\public\common\pagination_control.php:48
+msgid "Next Page"
+msgstr "Page suivante"
+
+#: views\public\find\advanced-search.php:5
+msgid "Search"
+msgstr "Recherche"
+
+#: views\public\find\advanced-search.php:23
+msgid "Advanced Search"
+msgstr "Recherche avancée"
+
+#: views\public\find\advanced-search.php:47
+msgid "Search in"
+msgstr "Chercher dans"
+
+#: views\public\find\advanced-search.php:58
+msgid "Condition"
+msgstr "Condition"
+
+#: views\public\find\advanced-search.php:71
+msgid "Fields"
+msgstr "Champs"
+
+#: views\public\find\advanced-search.php:88
+msgid "Search Joiner"
+msgstr "Chercher un 'joiner'"
+
+#: views\public\find\advanced-search.php:101
+msgid "Search Field"
+msgstr "Champ de recherche"
+
+#: views\public\find\advanced-search.php:111
+msgid "Search Type"
+msgstr "Type de recherche"
+
+#: views\public\find\advanced-search.php:117
+msgid "Does not contain"
+msgstr "Ne contient pas"
+
+#: views\public\find\advanced-search.php:118
+msgid "Does not match"
+msgstr "Ne correspond pas à"
+
+#: views\public\find\advanced-search.php:119
+msgid "Ends with"
+msgstr "Se termine par"
+
+#: views\public\find\advanced-search.php:120
+msgid "Is empty"
+msgstr "Est vide"
+
+#: views\public\find\advanced-search.php:121
+msgid "Is exactly"
+msgstr "Est exactement"
+
+#: views\public\find\advanced-search.php:122
+msgid "Is not empty"
+msgstr "N'est pas vide"
+
+#: views\public\find\advanced-search.php:123
+msgid "Is not exactly"
+msgstr "N'est pas exactement"
+
+#: views\public\find\advanced-search.php:124
+msgid "Matches"
+msgstr "Correspond à"
+
+#: views\public\find\advanced-search.php:125
+msgid "Starts with"
+msgstr "Débute par"
+
+#: views\public\find\advanced-search.php:133
+msgid "Search Terms"
+msgstr "Termes de recherche"
+
+#: views\public\find\advanced-search.php:140
+msgid "Remove field"
+msgstr "Retirer un champ"
+
+#: views\public\find\advanced-search.php:145
+msgid "Add field"
+msgstr "Ajouter un champ"
+
+#: views\public\find\advanced-search.php:188
+msgid "Show search results in:"
+msgstr "Voir les résultats dans :"
+
+#: views\public\find\advanced-search.php:196
+msgid "Table Layout"
+msgstr "Disposition du tableau"
+
+#: views\public\find\advanced-search.php:206
+msgid "Index Field"
+msgstr "Champs d'index"
+
+#: views\public\find\advanced-search.php:215
+msgid "Tree Field"
+msgstr "Champs de hiérarchie"
+
+#: views\public\find\advanced-search.php:224
+msgid "Results Per Page"
+msgstr "Résultats par page"
+
+#: views\public\find\advanced-search.php:231
+msgid "Search:"
+msgstr "Rechercher :"
+
+#: views\public\image-view.php:37 views\public\index-view.php:190
+#: views\public\relationships-view.php:75 views\public\table-view.php:86
+#: views\public\tree-view.php:89
+msgid "Your search returned no results."
+msgstr "Votre requête n'a donné aucun résultat."
+
+#: views\public\index-view.php:156 views\public\tree-view.php:60
+msgid "Search Results"
+msgstr "Résultats de recherche"
+
+#: views\public\index-view.php:163
+#, php-format
+msgid "Index View by %s"
+msgstr "Vue d'index par %s"
+
+#: views\public\relationships-view.php:15
+msgid "Related Items"
+msgstr "Contenus connexes"
+
+#: views\public\table-view-row.php:62
+msgid "Edit"
+msgstr "Modifier"
+
+#: views\public\table-view-script.php:108
+msgid "show less"
+msgstr "montrer moins"
+
+#: views\public\tree-view-script.php:11
+msgid "Hide Empty Entries"
+msgstr "Masquer les entrées vides"
+
+#: views\public\tree-view-script.php:11
+msgid "Show Entire Tree"
+msgstr "Montrer les entrées vides"
+
+#: views\public\tree-view.php:67
+#, php-format
+msgid "Tree View by %s"
+msgstr "Vue d'arborescence par %s"

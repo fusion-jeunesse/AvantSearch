@@ -1,0 +1,18 @@
+# Translation for the AvantSearch plugin for Omeka Classic.
+# Copyright (C) 2019 Fusion Jeunesse / Youth Fusion
+# This file is distributed under the same license as the Omeka package.
+# José-Nicolas Binette <biguenique@gmail.com>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: AvantSearch\n"
+"Report-Msgid-Bugs-To: https://fusionjeunesse.org\n"
+"POT-Creation-Date: 2019-08-06 15:30+0200\n"
+"PO-Revision-Date: 2019-08-06 15:30-0400\n"
+"Last-Translator: Félix Arseneau <farseneau@fusionjeunesse.org>\n"
+"Language-Team: Français <farseneau@fusionjeunesse.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"

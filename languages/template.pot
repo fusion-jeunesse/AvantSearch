@@ -1,0 +1,440 @@
+# Translation for the AvantSearch plugin for Omeka Classic.
+# Copyright (C) 2019 Fusion Jeunesse / Youth Fusion
+# This file is distributed under the same license as the Omeka package.
+# José-Nicolas Binette <biguenique@gmail.com>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: AvantSearch\n"
+"Report-Msgid-Bugs-To: https://fusionjeunesse.org\n"
+"POT-Creation-Date: 2019-08-06 15:30+0200\n"
+"PO-Revision-Date: 2019-08-06 15:30-0400\n"
+"Last-Translator: Félix Arseneau <farseneau@fusionjeunesse.org>\n"
+"Language-Team: Français <farseneau@fusionjeunesse.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: config_form.php:53
+msgid "Show the option to limit keyword searching to Title text."
+msgstr ""
+
+#: config_form.php:66
+msgid "Customization of columns in Table View search results."
+msgstr ""
+
+#: config_form.php:76
+msgid "Layout definitions."
+msgstr ""
+
+#: config_form.php:86
+msgid "The width of the layout selector dropdown."
+msgstr ""
+
+#: config_form.php:97
+msgid "Detail layout elements."
+msgstr ""
+
+#: config_form.php:107
+msgid "Elements that can be used as the Index View field."
+msgstr ""
+
+#: config_form.php:117
+msgid "Elements that can be used as the Tree View field."
+msgstr ""
+
+#: config_form.php:128
+msgid "Show the option to display results in Relationships View."
+msgstr ""
+
+#: config_form.php:141
+msgid "Elements that contain hierarchical values."
+msgstr ""
+
+#: config_form.php:151
+msgid "Columns that should be sorted as integers."
+msgstr ""
+
+#: config_form.php:162
+msgid "Sort street addresses by street name, then by street number."
+msgstr ""
+
+#: models\SearchConfig.php:3
+msgid "Address Sorting"
+msgstr ""
+
+#: models\SearchConfig.php:4
+msgid "Columns"
+msgstr ""
+
+#: models\SearchConfig.php:5
+msgid "Detail Layout"
+msgstr ""
+
+#: models\SearchConfig.php:6 models\SearchResultsViewFactory.php:67
+msgid "Index View"
+msgstr ""
+
+#: models\SearchConfig.php:7
+msgid "Integer Sorting"
+msgstr ""
+
+#: models\SearchConfig.php:8
+msgid "Layouts"
+msgstr ""
+
+#: models\SearchConfig.php:9
+msgid "Layout Selector Width"
+msgstr ""
+
+#: models\SearchConfig.php:10 models\SearchResultsViewFactory.php:76
+#: views\public\relationships-view.php:28
+msgid "Relationships View"
+msgstr ""
+
+#: models\SearchConfig.php:11
+msgid "Hierarchies"
+msgstr ""
+
+#: models\SearchConfig.php:12
+msgid "Titles Only"
+msgstr ""
+
+#: models\SearchConfig.php:13 models\SearchResultsViewFactory.php:70
+msgid "Tree View"
+msgstr ""
+
+#: models\SearchConfig.php:31
+#, php-format
+msgid ""
+"This installation uses the %s storage engine for keyword searching.</br>"
+msgstr ""
+
+#: models\SearchConfig.php:33
+msgid "Learn more."
+msgstr ""
+
+#: models\SearchConfig.php:420
+#, php-format
+msgid "'%s' is not a valid alignment. Options: %s."
+msgstr ""
+
+#: models\SearchConfig.php:477
+msgid "No display option specified."
+msgstr ""
+
+#: models\SearchConfig.php:483
+#, php-format
+msgid "'%s' is not a valid display option. Options: %s."
+msgstr ""
+
+#: models\SearchConfig.php:535
+#, php-format
+msgid ""
+"'%s' is not a valid layout Id. Specify 'L' followed by an integer greater "
+"than 0."
+msgstr ""
+
+#: models\SearchConfig.php:540
+#, php-format
+msgid "Layouts: 'L%s' is specified twice."
+msgstr ""
+
+#: models\SearchConfig.php:547
+#, php-format
+msgid "Syntax error at '%s'. Only 'admin' is allowed after the layout name."
+msgstr ""
+
+#: models\SearchConfig.php:558
+#, php-format
+msgid "'%s' is not an element."
+msgstr ""
+
+#: models\SearchConfig.php:570
+msgid "Layout Selector Width must be an integer value of 100 or greater."
+msgstr ""
+
+#: models\SearchResultsFilters.php:22 models\SearchResultsFilters.php:97
+#: views\public\find\advanced-search.php:93
+msgid "AND"
+msgstr ""
+
+#: models\SearchResultsFilters.php:22 models\SearchResultsFilters.php:93
+#: views\public\find\advanced-search.php:94
+msgid "OR"
+msgstr ""
+
+#: models\SearchResultsFilters.php:62 models\SearchResultsFilters.php:144
+#: views\public\find\advanced-search.php:38
+msgid "Keywords"
+msgstr ""
+
+#: models\SearchResultsFilters.php:116
+msgid "Date Range"
+msgstr ""
+
+#: models\SearchResultsFilters.php:118
+msgid "'Date equal to or after'"
+msgstr ""
+
+#: models\SearchResultsFilters.php:120
+msgid "'Date equal to or before"
+msgstr ""
+
+#: models\SearchResultsFilters.php:127
+#, php-format
+msgid "Sorted by %s"
+msgstr ""
+
+#: models\SearchResultsFilters.php:132
+msgid "(only showing items with images or files)"
+msgstr ""
+
+#: models\SearchResultsFilters.php:146
+msgid "in"
+msgstr ""
+
+#: models\SearchResultsFilters.php:146
+msgid "titles only"
+msgstr ""
+
+#: models\SearchResultsFilters.php:162
+msgid "No search filters"
+msgstr ""
+
+#: models\SearchResultsTableViewRowData.php:72
+#: views\public\table-view-script.php:108
+msgid "show more"
+msgstr ""
+
+#: models\SearchResultsTableViewRowData.php:191
+#: views\public\find\advanced-search.php:151
+msgid "Tags"
+msgstr ""
+
+#: models\SearchResultsView.php:158
+msgid "Modify Search"
+msgstr ""
+
+#: models\SearchResultsView.php:183
+msgid "Select Below"
+msgstr ""
+
+#: models\SearchResultsView.php:193
+msgid "Public Fields"
+msgstr ""
+
+#: models\SearchResultsView.php:198
+msgid "Admin Fields"
+msgstr ""
+
+#: models\SearchResultsView.php:247
+msgid "All items"
+msgstr ""
+
+#: models\SearchResultsView.php:248
+msgid "Only items with images or files"
+msgstr ""
+
+#: models\SearchResultsView.php:296
+msgid "All words"
+msgstr ""
+
+#: models\SearchResultsView.php:297 views\public\find\advanced-search.php:116
+msgid "Contains"
+msgstr ""
+
+#: models\SearchResultsView.php:298
+msgid "Boolean"
+msgstr ""
+
+#: models\SearchResultsView.php:305
+msgid "All fields"
+msgstr ""
+
+#: models\SearchResultsView.php:306
+msgid "Titles only"
+msgstr ""
+
+#: models\SearchResultsView.php:352
+msgid "item found"
+msgstr ""
+
+#: models\SearchResultsView.php:352
+msgid "items found"
+msgstr ""
+
+#: models\SearchResultsViewFactory.php:63
+msgid "Table View"
+msgstr ""
+
+#: models\SearchResultsViewFactory.php:64 views\public\image-view.php:17
+msgid "Image View"
+msgstr ""
+
+#: views\public\common\pagination_control.php:5
+msgid "Pagination"
+msgstr ""
+
+#: views\public\common\pagination_control.php:11
+msgid "Previous Page"
+msgstr ""
+
+#: views\public\common\pagination_control.php:36
+msgid "Current Page"
+msgstr ""
+
+#: views\public\common\pagination_control.php:39
+#, php-format
+msgid "%s of %s"
+msgstr ""
+
+#: views\public\common\pagination_control.php:48
+msgid "Next Page"
+msgstr ""
+
+#: views\public\find\advanced-search.php:5
+msgid "Search"
+msgstr ""
+
+#: views\public\find\advanced-search.php:23
+msgid "Advanced Search"
+msgstr ""
+
+#: views\public\find\advanced-search.php:47
+msgid "Search in"
+msgstr ""
+
+#: views\public\find\advanced-search.php:58
+msgid "Condition"
+msgstr ""
+
+#: views\public\find\advanced-search.php:71
+msgid "Fields"
+msgstr ""
+
+#: views\public\find\advanced-search.php:88
+msgid "Search Joiner"
+msgstr ""
+
+#: views\public\find\advanced-search.php:101
+msgid "Search Field"
+msgstr ""
+
+#: views\public\find\advanced-search.php:111
+msgid "Search Type"
+msgstr ""
+
+#: views\public\find\advanced-search.php:117
+msgid "Does not contain"
+msgstr ""
+
+#: views\public\find\advanced-search.php:118
+msgid "Does not match"
+msgstr ""
+
+#: views\public\find\advanced-search.php:119
+msgid "Ends with"
+msgstr ""
+
+#: views\public\find\advanced-search.php:120
+msgid "Is empty"
+msgstr ""
+
+#: views\public\find\advanced-search.php:121
+msgid "Is exactly"
+msgstr ""
+
+#: views\public\find\advanced-search.php:122
+msgid "Is not empty"
+msgstr ""
+
+#: views\public\find\advanced-search.php:123
+msgid "Is not exactly"
+msgstr ""
+
+#: views\public\find\advanced-search.php:124
+msgid "Matches"
+msgstr ""
+
+#: views\public\find\advanced-search.php:125
+msgid "Starts with"
+msgstr ""
+
+#: views\public\find\advanced-search.php:133
+msgid "Search Terms"
+msgstr ""
+
+#: views\public\find\advanced-search.php:140
+msgid "Remove field"
+msgstr ""
+
+#: views\public\find\advanced-search.php:145
+msgid "Add field"
+msgstr ""
+
+#: views\public\find\advanced-search.php:188
+msgid "Show search results in:"
+msgstr ""
+
+#: views\public\find\advanced-search.php:196
+msgid "Table Layout"
+msgstr ""
+
+#: views\public\find\advanced-search.php:206
+msgid "Index Field"
+msgstr ""
+
+#: views\public\find\advanced-search.php:215
+msgid "Tree Field"
+msgstr ""
+
+#: views\public\find\advanced-search.php:224
+msgid "Results Per Page"
+msgstr ""
+
+#: views\public\find\advanced-search.php:231
+msgid "Search:"
+msgstr ""
+
+#: views\public\image-view.php:37 views\public\index-view.php:190
+#: views\public\relationships-view.php:75 views\public\table-view.php:86
+#: views\public\tree-view.php:89
+msgid "Your search returned no results."
+msgstr ""
+
+#: views\public\index-view.php:156 views\public\tree-view.php:60
+msgid "Search Results"
+msgstr ""
+
+#: views\public\index-view.php:163
+#, php-format
+msgid "Index View by %s"
+msgstr ""
+
+#: views\public\relationships-view.php:15
+msgid "Related Items"
+msgstr ""
+
+#: views\public\table-view-row.php:62
+msgid "Edit"
+msgstr ""
+
+#: views\public\table-view-script.php:108
+msgid "show less"
+msgstr ""
+
+#: views\public\tree-view-script.php:11
+msgid "Hide Empty Entries"
+msgstr ""
+
+#: views\public\tree-view-script.php:11
+msgid "Show Entire Tree"
+msgstr ""
+
+#: views\public\tree-view.php:67
+#, php-format
+msgid "Tree View by %s"
+msgstr ""
