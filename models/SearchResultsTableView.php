@@ -200,7 +200,7 @@ class SearchResultsTableView extends SearchResultsView
                 continue;
             }
 
-            $layoutSelectOptions[$idNumber] = $layout['name'];
+            $layoutSelectOptions[$idNumber] = __($layout['name']);
         }
         return $layoutSelectOptions;
     }

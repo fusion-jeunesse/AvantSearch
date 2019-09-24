@@ -235,7 +235,7 @@ echo "<div id='avantsearch-container'>";
         </div>
 
         <div class="search-form-reset-button">
-            <?php echo '<a href="' . WEB_ROOT . '/find/advanced">Reset all search options</a>'; ?>
+            <?php echo '<a href="' . WEB_ROOT . '/find/advanced">'.__('Reset all search options').'</a>'; ?>
         </div>
     </div>
 </form>

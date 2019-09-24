@@ -80,7 +80,7 @@ class SearchResultsFilters
                     continue;
                 $elementName = $element->name;
                 $type = __($row['type']);
-                $advancedValue = $elementName . ' ' . $type;
+                $advancedValue = __($elementName) . ' ' . $type;
                 if (isset($row['terms']) && $type != 'is empty' && $type != 'is not empty')
                 {
                     $advancedValue .= ' "' . $row['terms'] . '"';
@@ -124,7 +124,7 @@ class SearchResultsFilters
 
         if ($this->searchResults->getTotalResults() && $this->searchResults->getViewId() == SearchResultsViewFactory::TABLE_VIEW_ID)
         {
-            $layoutDetails .= __('Sorted by %s', $this->searchResults->getSortFieldName());
+            $layoutDetails .= __('Sorted by %s', __($this->searchResults->getSortFieldName()));
         }
 
         if ($this->searchResults->getSearchFiles() && $this->searchResults->getTotalResults() > 0)

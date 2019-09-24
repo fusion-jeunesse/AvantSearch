@@ -30,9 +30,8 @@ foreach ($columnsData as $elementId => $column)
     // Form the special class name e.g. 'search-th-title' that is unique to this header column.
     $classes .= ' ' . SearchResultsView::createColumnClass($column['name'], 'th');
 
-    $headerColumns[$elementId] = array('label' => $column['alias'], 'classes' => $classes, 'sortable' => true);
+    $headerColumns[$elementId] = array('label' => __($column['alias']), 'classes' => $classes, 'sortable' => true);
 }
 
 echo $searchResults->emitHeaderRow($headerColumns);
 ?>
-

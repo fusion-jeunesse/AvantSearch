@@ -32,7 +32,7 @@ class SearchResultsIndexView extends SearchResultsView
         $options = array();
         foreach ($indexViewData as $elementId => $elementName)
         {
-            $options[$elementId] = $elementName;
+            $options[$elementId] = __($elementName);
         }
         return $options;
     }

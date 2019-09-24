@@ -74,7 +74,7 @@ class SearchResultsView
     {
         $class = 'search-results-detail-element';
         $class .= in_array($elementName, $this->privateElementsData) ? ' private-element' : '';
-        return $text ? "<span class='$class'>$elementName</span>:<span class=\"search-results-detail-text\">$text</span>" : '';
+        return $text ? "<span class='$class'>".__($elementName)."</span>:<span class=\"search-results-detail-text\">$text</span>" : '';
     }
 
     public function emitHeaderRow($headerColumns)
@@ -189,12 +189,12 @@ class SearchResultsView
             // bottom of the list and require scrolling to select.
             foreach ($publicFields as $elementId => $fieldName)
             {
-                $value = $fieldName;
+                $value = __($fieldName);
                 $options[__('Public Fields')][$elementId] = $value;
             }
             foreach ($privateFields as $elementId => $fieldName)
             {
-                $value = $fieldName;
+                $value = __($fieldName);
                 $options[__('Admin Fields')][$elementId] = $value;
             }
         }
@@ -202,7 +202,7 @@ class SearchResultsView
         {
             foreach ($publicFields as $elementId => $fieldName)
             {
-                $value = $fieldName;
+                $value = __($fieldName);
                 $options[$elementId] = $value;
             }
         }
@@ -230,7 +230,7 @@ class SearchResultsView
             {
                 continue;
             }
-            $fields[$elementId] = $element['name'];
+            $fields[$elementId] = __($element['name']);
         }
 
         return $fields;

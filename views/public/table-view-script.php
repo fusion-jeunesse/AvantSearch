@@ -40,7 +40,7 @@
 
         // Show the user which layout is selected.
         var layoutName = layout.text();
-        jQuery('.search-results-layout-options-button').text(layoutName + ' Layout');
+        jQuery('.search-results-layout-options-button').text(layoutName);
 
         if (layoutId !== currentLayoutId)
         {
@@ -72,7 +72,7 @@
             newUrl = newUrl + newPattern;
             history.replaceState(null, null, newUrl);
         }
-        
+
         currentLayoutId = layoutId;
     }
 

@@ -1,22 +1,31 @@
-# Translation for the Fusion theme for Omeka.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Translation for the AvantSearch plugin for Omeka Classic.
+# Copyright (C) 2019 Fusion Jeunesse / Youth Fusion
 # This file is distributed under the same license as the Omeka package.
 # José-Nicolas Binette <biguenique@gmail.com>, 2019.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Omeka-theme-Fusion\n"
+"Project-Id-Version: AvantSearch\n"
 "Report-Msgid-Bugs-To: https://fusionjeunesse.org\n"
 "POT-Creation-Date: 2019-08-06 15:30+0200\n"
-"PO-Revision-Date: 2019-09-23 20:16-0400\n"
+"PO-Revision-Date: 2019-09-24 00:11-0400\n"
+"Last-Translator: \n"
 "Language-Team: Français <farseneau@fusionjeunesse.org>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.2.3\n"
-"Last-Translator: \n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"Language: fr\n"
+
+msgid "Details"
+msgstr "Détails"
+
+msgid "Type / Subject"
+msgstr "Type / Sujet"
+
+msgid "Title only"
+msgstr "Titre seulement"
 
 #: config_form.php:53
 msgid "Show the option to limit keyword searching to Title text."
@@ -46,13 +55,11 @@ msgstr "Éléments qui peuvent être utilisés comme champ de vue d'index."
 
 #: config_form.php:117
 msgid "Elements that can be used as the Tree View field."
-msgstr ""
-"Éléments qui peuvent être utilisés comme champ de vue d'arborescence."
+msgstr "Éléments qui peuvent être utilisés comme champ de vue d'arborescence."
 
 #: config_form.php:128
 msgid "Show the option to display results in Relationships View."
-msgstr ""
-"Afficher l'option d'affichage des résultats dans la vue des relations."
+msgstr "Afficher l'option d'affichage des résultats dans la vue des relations."
 
 #: config_form.php:141
 msgid "Elements that contain hierarchical values."
@@ -65,6 +72,10 @@ msgstr "Colonnes qui devraient être triées comme des entiers."
 #: config_form.php:162
 msgid "Sort street addresses by street name, then by street number."
 msgstr "Trier les adresses par nom de rue, puis par numéro de rue."
+
+#: models\AvantSearch.php:168 views\public\find\advanced-search.php:23
+msgid "Advanced Search"
+msgstr "Recherche avancée"
 
 #: models\SearchConfig.php:3
 msgid "Address Sorting"
@@ -182,10 +193,6 @@ msgstr "OU"
 #: views\public\find\advanced-search.php:38
 msgid "Keywords"
 msgstr "Mots-clés"
-
-#: models\SearchResultsFilters.php:82
-msgid "type"
-msgstr "type"
 
 #: models\SearchResultsFilters.php:116
 msgid "Date Range"
@@ -315,10 +322,6 @@ msgstr "Page suivante"
 msgid "Search"
 msgstr "Recherche"
 
-#: views\public\find\advanced-search.php:23
-msgid "Advanced Search"
-msgstr "Recherche avancée"
-
 #: views\public\find\advanced-search.php:47
 msgid "Search in"
 msgstr "Chercher dans"
@@ -415,6 +418,10 @@ msgstr "Résultats par page"
 msgid "Search:"
 msgstr "Rechercher :"
 
+#: views\public\find\advanced-search.php:238
+msgid "Reset all search options"
+msgstr "Réinitialiser toutes les options de recherche"
+
 #: views\public\image-view.php:37 views\public\index-view.php:190
 #: views\public\relationships-view.php:75 views\public\table-view.php:86
 #: views\public\tree-view.php:89
@@ -454,3 +461,6 @@ msgstr "Montrer les entrées vides"
 #, php-format
 msgid "Tree View by %s"
 msgstr "Vue d'arborescence par %s"
+
+#~ msgid "type"
+#~ msgstr "type"

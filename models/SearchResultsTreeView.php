@@ -201,7 +201,7 @@ class SearchResultsTreeView extends SearchResultsView
         $options = array();
         foreach ($treeViewData as $elementId => $elementName)
         {
-            $options[$elementId] = $elementName;
+            $options[$elementId] = __($elementName);
         }
         return $options;
     }

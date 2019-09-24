@@ -17,6 +17,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+# Some strings need to be added/modified manually here (or elsewhere) to get translated:
+# - Search results Layout names
+msgid "Details"
+msgstr ""
+
+msgid "Type / Subject"
+msgstr ""
+
+msgid "Title only"
+msgstr ""
+
 #: config_form.php:53
 msgid "Show the option to limit keyword searching to Title text."
 msgstr ""
@@ -59,6 +70,10 @@ msgstr ""
 
 #: config_form.php:162
 msgid "Sort street addresses by street name, then by street number."
+msgstr ""
+
+#: models\AvantSearch.php:168 views\public\find\advanced-search.php:23
+msgid "Advanced Search"
 msgstr ""
 
 #: models\SearchConfig.php:3
@@ -299,10 +314,6 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: views\public\find\advanced-search.php:23
-msgid "Advanced Search"
-msgstr ""
-
 #: views\public\find\advanced-search.php:47
 msgid "Search in"
 msgstr ""
@@ -397,6 +408,10 @@ msgstr ""
 
 #: views\public\find\advanced-search.php:231
 msgid "Search:"
+msgstr ""
+
+#: views\public\find\advanced-search.php:238
+msgid "Reset all search options"
 msgstr ""
 
 #: views\public\image-view.php:37 views\public\index-view.php:190

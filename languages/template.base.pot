@@ -16,3 +16,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+# Some strings need to be added/modified manually here (or elsewhere) to get translated:
+# - Search results Layout names
+msgid "Details"
+msgstr ""
+
+msgid "Type / Subject"
+msgstr ""
+
+msgid "Title only"
+msgstr ""

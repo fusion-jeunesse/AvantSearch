@@ -42,7 +42,7 @@ if ($totalResults)
         }
 
         $id = "L$idNumber";
-        $layoutButtonHtml .= "<li><a id='$id' class='button show-layout-button'>{$layout['name']}</a></li>";
+        $layoutButtonHtml .= "<li><a id='$id' class='button show-layout-button'>".__($layout['name'])."</a></li>";
     }
     $layoutButtonHtml .= " </ul>";
     $layoutButtonHtml .= "</div>";
