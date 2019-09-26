@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: AvantSearch\n"
 "Report-Msgid-Bugs-To: https://fusionjeunesse.org\n"
 "POT-Creation-Date: 2019-08-06 15:30+0200\n"
-"PO-Revision-Date: 2019-09-24 00:11-0400\n"
+"PO-Revision-Date: 2019-09-25 14:25-0400\n"
 "Last-Translator: \n"
 "Language-Team: Français <farseneau@fusionjeunesse.org>\n"
 "Language: fr\n"
@@ -336,15 +336,15 @@ msgstr "Champs"
 
 #: views\public\find\advanced-search.php:88
 msgid "Search Joiner"
-msgstr "Chercher un 'joiner'"
+msgstr "Opérateur"
 
 #: views\public\find\advanced-search.php:101
 msgid "Search Field"
-msgstr "Champ de recherche"
+msgstr "Champ"
 
 #: views\public\find\advanced-search.php:111
 msgid "Search Type"
-msgstr "Type de recherche"
+msgstr "Condition"
 
 #: views\public\find\advanced-search.php:117
 msgid "Does not contain"

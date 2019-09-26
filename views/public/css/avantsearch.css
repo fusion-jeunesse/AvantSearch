@@ -167,6 +167,21 @@ input[type="checkbox"] {
   	width: 40%;
 }
 
+/* Suggest feature (jQuery auto-complete */
+.ui-autocomplete {
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.ui-autocomplete-loading {
+    background: #d7f7ff;
+}
+
+.ui-menu .ui-menu-item {
+    background-color: #d7f7ff;
+}
+
 /* Date fields */
 #search-filter-form #date-start,
 #search-filter-form #date-end {
@@ -1114,4 +1129,3 @@ input[type="checkbox"] {
 		column-count: 1;
 	}
 }
-

@@ -23,6 +23,7 @@ $showDateRangeOption = SearchConfig::getOptionSupportedDateRange();
 $pageTitle = __('Advanced Search');
 
 queue_js_file('js.cookie');
+queue_css_file('jquery-ui');
 echo head(array('title' => $pageTitle, 'bodyclass' => 'avantsearch-advanced'));
 echo "<h1>$pageTitle</h1>";
 echo "<div id='avantsearch-container'>";
@@ -102,7 +103,7 @@ echo "<div id='avantsearch-container'>";
 									'id' => null,
 									'class' => 'advanced-search-element'
 								),
-                                $searchResults->getAdvancedSearchFields()
+								$searchResults->getAdvancedSearchFields()
 							);
 							echo $this->formSelect(
 								"advanced[$i][type]",
@@ -430,5 +431,51 @@ echo "<div id='avantsearch-container'>";
         });
     });
 </script>
+<?php
+// Enable suggestions to AvantElements Suggest fields
+$suggestFields = null;
+if(plugin_is_active('AvantElements'))
+	$suggestFields = ElementSuggest::getIdsForSuggestElements();
+if(!empty($suggestFields)) : ?>
+<script type="text/javascript">
+	var suggestFields = [<?php echo $suggestFields; ?>];
+
+	// Enable auto-complete for the terms input of each
+	// avantsearch-option-column input set.
+	// Source is determined the id of selected field.
+	function updateAutoComplete() {
+
+		jQuery('#search-narrow-by-fields .search-entry').each(function() {
+			var element = jQuery(this).find('select.advanced-search-element');
+			var terms = jQuery(this).find('input.advanced-search-terms');
+
+			if( suggestFields.indexOf(parseInt(element.val())) > -1 ) {
+				var suggestUrl = '<?php echo url('/elements/suggest/'); ?>' + element.val();
+				terms.autocomplete({
+					source: '<?php echo url('/elements/suggest/'); ?>' + element.val(),
+					minLength: 1
+				});
+			} else {
+				terms.autocomplete({ source: [] });
+			}
+
+		});
+
+	}
+
+	// Initialize on initial form load
+	jQuery(document).ready( updateAutoComplete );
+	// Update on element selection change
+	jQuery('select.advanced-search-element').change( updateAutoComplete)
+	// Update new rows
+	jQuery('.add_search').click(function() {
+		setTimeout(function() {
+			jQuery('.search-entry:last-of-type select.advanced-search-element').change( updateAutoComplete );
+			updateAutoComplete();
+		}, 200);
+	});
+
+</script>
+<?php endif; ?>
 
 <?php echo foot(); ?>

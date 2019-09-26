@@ -72,7 +72,7 @@ msgstr ""
 msgid "Sort street addresses by street name, then by street number."
 msgstr ""
 
-#: models\AvantSearch.php:168 views\public\find\advanced-search.php:23
+#: models\AvantSearch.php:168 views\public\find\advanced-search.php:28
 msgid "Advanced Search"
 msgstr ""
 
@@ -172,17 +172,17 @@ msgid "Layout Selector Width must be an integer value of 100 or greater."
 msgstr ""
 
 #: models\SearchResultsFilters.php:22 models\SearchResultsFilters.php:97
-#: views\public\find\advanced-search.php:93
+#: views\public\find\advanced-search.php:98
 msgid "AND"
 msgstr ""
 
 #: models\SearchResultsFilters.php:22 models\SearchResultsFilters.php:93
-#: views\public\find\advanced-search.php:94
+#: views\public\find\advanced-search.php:99
 msgid "OR"
 msgstr ""
 
 #: models\SearchResultsFilters.php:62 models\SearchResultsFilters.php:144
-#: views\public\find\advanced-search.php:38
+#: views\public\find\advanced-search.php:43
 msgid "Keywords"
 msgstr ""
 
@@ -225,7 +225,7 @@ msgid "show more"
 msgstr ""
 
 #: models\SearchResultsTableViewRowData.php:191
-#: views\public\find\advanced-search.php:151
+#: views\public\find\advanced-search.php:156
 msgid "Tags"
 msgstr ""
 
@@ -257,7 +257,7 @@ msgstr ""
 msgid "All words"
 msgstr ""
 
-#: models\SearchResultsView.php:297 views\public\find\advanced-search.php:116
+#: models\SearchResultsView.php:297 views\public\find\advanced-search.php:121
 msgid "Contains"
 msgstr ""
 
@@ -314,103 +314,103 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: views\public\find\advanced-search.php:47
+#: views\public\find\advanced-search.php:52
 msgid "Search in"
 msgstr ""
 
-#: views\public\find\advanced-search.php:58
+#: views\public\find\advanced-search.php:63
 msgid "Condition"
 msgstr ""
 
-#: views\public\find\advanced-search.php:71
+#: views\public\find\advanced-search.php:76
 msgid "Fields"
 msgstr ""
 
-#: views\public\find\advanced-search.php:88
+#: views\public\find\advanced-search.php:93
 msgid "Search Joiner"
 msgstr ""
 
-#: views\public\find\advanced-search.php:101
+#: views\public\find\advanced-search.php:106
 msgid "Search Field"
 msgstr ""
 
-#: views\public\find\advanced-search.php:111
+#: views\public\find\advanced-search.php:116
 msgid "Search Type"
 msgstr ""
 
-#: views\public\find\advanced-search.php:117
+#: views\public\find\advanced-search.php:122
 msgid "Does not contain"
 msgstr ""
 
-#: views\public\find\advanced-search.php:118
+#: views\public\find\advanced-search.php:123
 msgid "Does not match"
 msgstr ""
 
-#: views\public\find\advanced-search.php:119
+#: views\public\find\advanced-search.php:124
 msgid "Ends with"
 msgstr ""
 
-#: views\public\find\advanced-search.php:120
+#: views\public\find\advanced-search.php:125
 msgid "Is empty"
 msgstr ""
 
-#: views\public\find\advanced-search.php:121
+#: views\public\find\advanced-search.php:126
 msgid "Is exactly"
 msgstr ""
 
-#: views\public\find\advanced-search.php:122
+#: views\public\find\advanced-search.php:127
 msgid "Is not empty"
 msgstr ""
 
-#: views\public\find\advanced-search.php:123
+#: views\public\find\advanced-search.php:128
 msgid "Is not exactly"
 msgstr ""
 
-#: views\public\find\advanced-search.php:124
+#: views\public\find\advanced-search.php:129
 msgid "Matches"
 msgstr ""
 
-#: views\public\find\advanced-search.php:125
+#: views\public\find\advanced-search.php:130
 msgid "Starts with"
 msgstr ""
 
-#: views\public\find\advanced-search.php:133
+#: views\public\find\advanced-search.php:138
 msgid "Search Terms"
 msgstr ""
 
-#: views\public\find\advanced-search.php:140
+#: views\public\find\advanced-search.php:145
 msgid "Remove field"
 msgstr ""
 
-#: views\public\find\advanced-search.php:145
+#: views\public\find\advanced-search.php:150
 msgid "Add field"
 msgstr ""
 
-#: views\public\find\advanced-search.php:188
+#: views\public\find\advanced-search.php:193
 msgid "Show search results in:"
 msgstr ""
 
-#: views\public\find\advanced-search.php:196
+#: views\public\find\advanced-search.php:201
 msgid "Table Layout"
 msgstr ""
 
-#: views\public\find\advanced-search.php:206
+#: views\public\find\advanced-search.php:211
 msgid "Index Field"
 msgstr ""
 
-#: views\public\find\advanced-search.php:215
+#: views\public\find\advanced-search.php:220
 msgid "Tree Field"
 msgstr ""
 
-#: views\public\find\advanced-search.php:224
+#: views\public\find\advanced-search.php:229
 msgid "Results Per Page"
 msgstr ""
 
-#: views\public\find\advanced-search.php:231
+#: views\public\find\advanced-search.php:236
 msgid "Search:"
 msgstr ""
 
-#: views\public\find\advanced-search.php:238
+#: views\public\find\advanced-search.php:243
 msgid "Reset all search options"
 msgstr ""
 
