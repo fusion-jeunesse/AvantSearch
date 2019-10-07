@@ -9,6 +9,7 @@ class AvantSearchPlugin extends Omeka_Plugin_AbstractPlugin
         'before_save_item',
         'config',
         'config_form',
+        'define_acl',
         'define_routes',
         'initialize',
         'install',
@@ -61,6 +62,20 @@ class AvantSearchPlugin extends Omeka_Plugin_AbstractPlugin
     public function hookConfigForm()
     {
         require dirname(__FILE__) . '/config_form.php';
+    }
+
+    /**
+     * Define this plugin's ACL.
+     */
+    public function hookDefineAcl($args)
+    {
+        // Restrict access to super and admin users.
+        $acl = $args['acl'];
+        $acl->addResource('AvantSearch_Find');
+        foreach($acl->getRoles() as $role) {
+            if($acl->isAllowed($role, 'Search', 'index'))
+                $acl->allow($role, ['AvantSearch_Find'], ['advanced-search','subject-search','search-results']);
+        }
     }
 
     public function hookDefineRoutes($args)
