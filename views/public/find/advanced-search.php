@@ -18,12 +18,16 @@ $searchFilesOnly = $searchResultsTable->getSearchFiles();
 $condition = $searchResults->getKeywordsCondition();
 
 $showTitlesOption = get_option(SearchConfig::OPTION_TITLES_ONLY) == true;
+$simpleFieldOption = SearchConfig::getOptionDataForSimpleField();
+$selectFieldOption = ElementsConfig::getOptionDataForSelectField();
 $showDateRangeOption = SearchConfig::getOptionSupportedDateRange();
 
 $pageTitle = __('Advanced Search');
 
 queue_js_file('js.cookie');
+queue_js_file('select2/select2.min');
 queue_css_file('jquery-ui');
+queue_css_file('select2.min');
 echo head(array('title' => $pageTitle, 'bodyclass' => 'avantsearch-advanced'));
 echo "<h1>$pageTitle</h1>";
 echo "<div id='avantsearch-container'>";
@@ -65,6 +69,73 @@ echo "<div id='avantsearch-container'>";
 				</div>
 			</div>
 		</div>
+
+		<?php if( !empty($simpleFieldOption) ): ?>
+		<div id="search-simple-fields" class="search-form-section">
+			<?php foreach($simpleFieldOption as $element_id => $element_name): ?>
+			<div class="search-field">
+				<div class="avantsearch-label-column">
+					<?php echo $this->formLabel("element[$element_id]", __($element_name)); ?><br>
+				</div>
+				<div class="avantsearch-option-column inputs">
+					<?php
+						$inputName = "simple[$element_id]";
+						if(isset($_GET['simple'][$element_id]))
+							$value = $_GET['simple'][$element_id];
+						else
+							$value = '';
+						$isSelect = false;
+						$isMultiple = true;
+						if( array_key_exists($element_id, $selectFieldOption) ) {
+							$vocabulary = AvantElements::getSimpleVocabTerms($element_id);
+							$isSelect = !empty($vocabulary);
+						}
+						if($isSelect) {
+							$selectTerms = array();
+							if(!$isMultiple) $selectTerms[''] = __('Select Below'); // + array_combine($vocabulary, $vocabulary);
+							// Split options into optgroups
+							$optgroup = null;
+							foreach($vocabulary as $term) {
+									if(defined('SimpleVocab_Controller_Plugin_SelectFilter::MATCH_OPTGROUP')
+									and preg_match(SimpleVocab_Controller_Plugin_SelectFilter::MATCH_OPTGROUP,$term,$match)) {
+											$optgroup = $match[1];
+											$selectTerms[$optgroup] = array();
+									} elseif(!is_null($optgroup)) {
+											$selectTerms[$optgroup][$term] = $term;
+									} else {
+											$selectTerms[$term] = $term;
+									}
+							}
+							echo get_view()->formSelect(
+								$inputName,
+								$value,
+								array(
+										'id' => 'element_'.$element_id,
+										'data-element' => $element_id,
+										'class' => 'simple-search-terms',
+										'style' => 'width:100%'.($isMultiple?';height:auto':''),
+										'multiple' => $isMultiple,
+								),
+								$selectTerms
+							);
+						} else {
+							echo $this->formText(
+								$inputName,
+								$value,
+								array(
+									'id' => 'element_'.$element_id,
+									'data-element' => $element_id,
+									'class' => 'simple-search-terms',
+									'style' => 'width:100%'
+								)
+							);
+						}
+					?>
+				</div>
+			</div>
+			<?php endforeach; ?>
+		</div>
+		<?php endif; ?>
 
 		<div  id="search-narrow-by-fields" class="search-form-section">
 			<div>
@@ -438,7 +509,20 @@ if(plugin_is_active('AvantElements'))
 	$suggestFields = ElementSuggest::getIdsForSuggestElements();
 if(!empty($suggestFields)) : ?>
 <script type="text/javascript">
+	// Enable select2 on multiple select fields
+	jQuery('#search-simple-fields select.simple-search-terms[multiple]').select2();
 	var suggestFields = [<?php echo $suggestFields; ?>];
+
+	// Enable auto-complete on simple text fields
+  jQuery('#search-simple-fields input.simple-search-terms').each(function() {
+		var element = jQuery(this).data('element');
+		if( suggestFields.indexOf(element) > -1 ) {
+			jQuery(this).autocomplete({
+				source: '<?php echo url('/elements/suggest/'); ?>' + element,
+				minLenght: 1
+			});
+		}
+	});
 
 	// Enable auto-complete for the terms input of each
 	// avantsearch-option-column input set.
@@ -450,7 +534,6 @@ if(!empty($suggestFields)) : ?>
 			var terms = jQuery(this).find('input.advanced-search-terms');
 
 			if( suggestFields.indexOf(parseInt(element.val())) > -1 ) {
-				var suggestUrl = '<?php echo url('/elements/suggest/'); ?>' + element.val();
 				terms.autocomplete({
 					source: '<?php echo url('/elements/suggest/'); ?>' + element.val(),
 					minLength: 1

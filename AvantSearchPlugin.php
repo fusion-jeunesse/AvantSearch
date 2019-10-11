@@ -69,7 +69,7 @@ class AvantSearchPlugin extends Omeka_Plugin_AbstractPlugin
      */
     public function hookDefineAcl($args)
     {
-        // Restrict access to super and admin users.
+        // Restrict access to users with Search privileges.
         $acl = $args['acl'];
         $acl->addResource('AvantSearch_Find');
         foreach($acl->getRoles() as $role) {

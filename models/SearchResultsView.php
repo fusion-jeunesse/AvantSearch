@@ -18,6 +18,7 @@ class SearchResultsView
     protected $conditionName;
     protected $error;
     protected $files;
+    protected $hideElementData;
     protected $keywords;
     protected $privateElements;
     protected $results;
@@ -34,6 +35,7 @@ class SearchResultsView
     function __construct()
     {
         $this->columnsData = SearchConfig::getOptionDataForColumns();
+        $this->hideElementData = SearchConfig::getOptionDataForHideElement();
         $this->privateElementsData = CommonConfig::getOptionDataForPrivateElements();
         $this->searchFilters = new SearchResultsFilters($this);
         $this->error = '';
@@ -173,12 +175,15 @@ class SearchResultsView
         // Get the names of the private elements that the admin configured for AvantCommon.
         $privateFields = array();
         foreach ($this->privateElementsData as $elementId => $name)
-        {
             $privateFields[$elementId] = $name;
-        }
+
+        // Get the name of elements that should be hidden from the narrow fields
+        $hiddenFields = array();
+        foreach ($this->hideElementData as $elementId => $name)
+            $hiddenFields[$elementId] = $name;
 
         $allFields = self::getAllFields();
-        $publicFields = array_diff($allFields, $privateFields);
+        $publicFields = array_diff(array_diff($allFields, $privateFields), $hiddenFields);
 
         $options = array('' => __('Select Below'));
 

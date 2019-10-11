@@ -1,6 +1,8 @@
 <?php
 
 define('CONFIG_LABEL_ADDRESS_SORTING', __('Address Sorting'));
+define('CONFIG_LABEL_SIMPLE_FIELD', __('Simple Field'));
+define('CONFIG_LABEL_HIDE_ELEMENT', __('Hide Element'));
 define('CONFIG_LABEL_COLUMNS', __('Columns'));
 define('CONFIG_LABEL_DETAIL_LAYOUT', __('Detail Layout'));
 define('CONFIG_LABEL_INDEX_VIEW', __('Index View'));
@@ -15,6 +17,8 @@ define('CONFIG_LABEL_TREE_VIEW', __('Tree View'));
 class SearchConfig extends ConfigOptions
 {
     const OPTION_ADDRESS_SORTING = 'avantsearch_address_sorting';
+    const OPTION_SIMPLE_FIELD = 'avantsearch_simple_field';
+    const OPTION_HIDE_ELEMENT = 'avantsearch_hide_element';
     const OPTION_COLUMNS = 'avantsearch_columns';
     const OPTION_DETAIL_LAYOUT = 'avantsearch_detail_layout';
     const OPTION_INDEX_VIEW = 'avantsearch_index_view';
@@ -32,6 +36,16 @@ class SearchConfig extends ConfigOptions
         echo "For improved search results, switch to the InnoDB storage engine. ";
         echo "<a class='avantsearch-help' href='https://github.com/gsoules/AvantSearch#improving-search-results' target='_blank'>" . __('Learn more.') . "</a>";
         echo "</p>";
+    }
+
+    public static function getOptionDataForSimpleField()
+    {
+        return self::getOptionListData(self::OPTION_SIMPLE_FIELD);
+    }
+
+    public static function getOptionDataForHideElement()
+    {
+        return self::getOptionListData(self::OPTION_HIDE_ELEMENT);
     }
 
     public static function getOptionDataForColumns()
@@ -192,6 +206,16 @@ class SearchConfig extends ConfigOptions
             $supported = false;
         }
         return $supported;
+    }
+
+    public static function getOptionTextForSimpleField()
+    {
+        return self::getOptionListText(self::OPTION_SIMPLE_FIELD);
+    }
+
+    public static function getOptionTextForHideElement()
+    {
+        return self::getOptionListText(self::OPTION_HIDE_ELEMENT);
     }
 
     public static function getOptionTextForColumns()
@@ -370,6 +394,8 @@ class SearchConfig extends ConfigOptions
     {
         self::saveOptionDataForLayouts();
         self::saveOptionDataForLayoutSelectorWidth();
+        self::saveOptionDataForSimpleField();
+        self::saveOptionDataForHideElement();
         self::saveOptionDataForColumns();
         self::saveOptionDataForDetailLayout();
         self::saveOptionDataForIndexView();
@@ -380,6 +406,16 @@ class SearchConfig extends ConfigOptions
         set_option(self::OPTION_TITLES_ONLY, intval($_POST[self::OPTION_TITLES_ONLY]));
         set_option(self::OPTION_RELATIONSHIPS_VIEW, intval($_POST[self::OPTION_RELATIONSHIPS_VIEW]));
         set_option(self::OPTION_ADDRESS_SORTING, intval($_POST[self::OPTION_ADDRESS_SORTING]));
+    }
+
+    public static function saveOptionDataForSimpleField()
+    {
+        self::saveOptionListData(self::OPTION_SIMPLE_FIELD, CONFIG_LABEL_SIMPLE_FIELD);
+    }
+
+    public static function saveOptionDataForHideElement()
+    {
+        self::saveOptionListData(self::OPTION_HIDE_ELEMENT, CONFIG_LABEL_HIDE_ELEMENT);
     }
 
     public static function saveOptionDataForColumns()

@@ -20,7 +20,7 @@ class SearchResultsFilters
         if (!empty($this->filterMessage))
         {
             if (strpos($criteria, __('AND'), 0) === false && strpos($criteria, __('OR'), 0) === false)
-                $this->filterMessage .= ',';
+                $this->filterMessage .= ',<br/>';
             $this->filterMessage .= ' ';
         }
         $this->filterMessage .= "$criteria";
@@ -60,6 +60,35 @@ class SearchResultsFilters
 
             $conditionName = $this->searchResults->getKeywordsConditionName();
             $displayArray[__('Keywords')] = "\"$keywords\" ($conditionName)";
+        }
+
+        if(array_key_exists('simple', $requestArray))
+        {
+            $simpleArray = array();
+            $index = 0;
+            foreach($requestArray['simple'] as $elementId => $terms)
+            {
+                if(empty($terms) or (is_string($terms) and trim($terms)==''))
+                    continue;
+
+                $element = $db->getTable('Element')->find($elementId);
+                if(empty($element))
+                    continue;
+
+                $elementName = $element->name;
+                $simpleValue = __($elementName);
+                if(is_string($terms))
+                    $simpleValue .= ' ' . __('contains') . ' "' . $terms .'"';
+                elseif(count($terms)==1) {
+                    $simpleValue .= ' ' . __('is exactly') . ' "' . array_pop($terms) .'"';
+                } else {
+                    $lastTerm = array_pop($terms);
+                    $simpleValue .= ' ' . __('is exactly')
+                      . ' "' . implode('", "', $terms) .'" '
+                      . __('or') . ' "' . $lastTerm . '"';
+                }
+                $simpleArray[$index++] = $simpleValue;
+            }
         }
 
         if (array_key_exists('advanced', $requestArray))
@@ -149,6 +178,13 @@ class SearchResultsFilters
             $this->addFilterMessageCriteria($name . ': ' . html_escape($query));
         }
 
+        if (!empty($simpleArray))
+        {
+            foreach($simpleArray as $j => $simple)
+            {
+                $this->addFilterMessageCriteria(html_escape($simple));
+            }
+        }
         if (!empty($advancedArray))
         {
             foreach ($advancedArray as $j => $advanced)

@@ -134,6 +134,10 @@ input[type="checkbox"] {
 	box-sizing: border-box;
 }
 
+.search-form-section .search-field{
+	clear: left;
+}
+
 .search-form-section .avantsearch-label-column {
 	float: left;
 	width: 20%;

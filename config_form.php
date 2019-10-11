@@ -6,6 +6,12 @@ $titlesOnlySupported = SearchConfig::getOptionsSupportedTitlesOnly();
 $addressSortingSupported = SearchConfig::getOptionSupportedAddressSorting();
 $relationshipsViewSupported = SearchConfig::getOptionSupportedRelationshipsView();
 
+$simpleFieldOption = SearchConfig::getOptionTextForSimpleField();
+$simpleFieldOptionRows = max(2, count(explode(PHP_EOL, $simpleFieldOption)));
+
+$hideElementOption = SearchConfig::getOptionTextForHideElement();
+$hideElementOptionRows = max(2, count(explode(PHP_EOL, $hideElementOption)));
+
 $columnsOption = SearchConfig::getOptionTextForColumns();
 $columnsOptionRows = max(2, count(explode(PHP_EOL, $columnsOption)));
 
@@ -53,8 +59,28 @@ $integerSortingOptionRows = max(2, count(explode(PHP_EOL, $integerSortingOption)
             <p class="explanation"><?php echo __('Show the option to limit keyword searching to Title text.'); ?></p>
             <?php echo $view->formCheckbox(SearchConfig::OPTION_TITLES_ONLY, true, array('checked' => (boolean)get_option(SearchConfig::OPTION_TITLES_ONLY))); ?>
         <?php else: ?>
-            <?php SearchConfig::emitOptionNotSupported('AvantSearch', 'titles-only'); ?>
+            <?php SearchConfig::emitOptionNotSupported('AvantSearch', 'titles-only-option'); ?>
         <?php endif; ?>
+    </div>
+</div>
+
+<div class="field">
+    <div class="two columns alpha">
+        <label><?php echo CONFIG_LABEL_SIMPLE_FIELD; ?></label>
+    </div>
+    <div class="inputs five columns omega">
+        <p class="explanation"><?php echo __("Add a simple field for these elements (supports SimpleVocab fields)."); ?></p>
+        <?php echo $view->formTextarea(SearchConfig::OPTION_SIMPLE_FIELD, $simpleFieldOption, array('rows' => $simpleFieldOptionRows)); ?>
+    </div>
+</div>
+
+<div class="field">
+    <div class="two columns alpha">
+        <label><?php echo CONFIG_LABEL_HIDE_ELEMENT; ?></label>
+    </div>
+    <div class="inputs five columns omega">
+        <p class="explanation"><?php echo __("Hide these elements from custom search fields."); ?></p>
+        <?php echo $view->formTextarea(SearchConfig::OPTION_HIDE_ELEMENT, $hideElementOption, array('rows' => $hideElementOptionRows)); ?>
     </div>
 </div>
 
@@ -128,7 +154,7 @@ $integerSortingOptionRows = max(2, count(explode(PHP_EOL, $integerSortingOption)
             <p class="explanation"><?php echo __('Show the option to display results in Relationships View.'); ?></p>
             <?php echo $view->formCheckbox(SearchConfig::OPTION_RELATIONSHIPS_VIEW, true, array('checked' => (boolean)get_option(SearchConfig::OPTION_RELATIONSHIPS_VIEW))); ?>
         <?php else: ?>
-            <?php SearchConfig::emitOptionNotSupported('AvantSearch', 'relationships-view'); ?>
+            <?php SearchConfig::emitOptionNotSupported('AvantSearch', 'relationships-view-option'); ?>
         <?php endif; ?>
     </div>
 </div>
@@ -162,12 +188,7 @@ $integerSortingOptionRows = max(2, count(explode(PHP_EOL, $integerSortingOption)
             <p class="explanation"><?php echo __('Sort street addresses by street name, then by street number.'); ?></p>
             <?php echo $view->formCheckbox(SearchConfig::OPTION_ADDRESS_SORTING, true, array('checked' => (boolean)get_option(SearchConfig::OPTION_ADDRESS_SORTING))); ?>
         <?php else: ?>
-            <?php SearchConfig::emitOptionNotSupported('AvantSearch', 'address-sorting'); ?>
+            <?php SearchConfig::emitOptionNotSupported('AvantSearch', 'address-sorting-option'); ?>
         <?php endif; ?>
     </div>
 </div>
-
-
-
-
-

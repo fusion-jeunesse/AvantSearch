@@ -77,15 +77,49 @@ class AvantSearch
         if (is_admin_theme())
             return $params;
 
-        if (!array_key_exists('advanced', $params))
+        if (!(array_key_exists('simple', $params) or array_key_exists('advanced', $params)))
             return $params;
 
-        $terms = $params['advanced'];
+        // Convert simple fields to advanced search queries
+        $terms = array();
+        if(array_key_exists('simple', $params)) {
+            foreach($params['simple'] as $elementId => $value)
+                if(is_string($value)) $terms[] = array(
+                    'joiner' => 'and',
+                    'element_id' => (string) $elementId,
+                    'type' => 'contains',
+                    'terms' => trim($value)
+                );
+                elseif(is_array($value) and count($value) == 1) $terms[] = array(
+                    'joiner' => 'and',
+                    'element_id' => (string) $elementId,
+                    'type' => 'is exactly',
+                    'terms' => array_pop($value),
+                );
+                elseif(is_array($value) and count($value) > 1) $terms[] = array(
+                    'joiner' => 'and',
+                    'element_id' => (string) $elementId,
+                    'type' => 'matches',
+                    // Convert selection to a regular expression that matches either term
+                    'terms' => '^('.array_reduce($value, function($carry, $term) {
+                        return ( $carry ? "$carry|" : '' ) . preg_quote($term);
+                    }).")$"
+                );
+            #var_dump($terms); die();
+        }
+
+        $simpleTerms = count($terms);
+        $terms = array_merge($terms, $params['advanced']);
+        // Make sure the first advanced joiner is 'and'
+        if(count($terms) > $simpleTerms) $terms[$simpleTerms]['joiner'] = 'and';
+        $params['advanced'] = $terms;
+
+        #var_dump($params['advanced']); die();
 
         // Protect against improperly hand-edited search terms in the query string.
         foreach ($terms as $key => $term)
         {
-            if (empty($type['element_id']) || empty($type['type']))
+            if (empty($term['element_id']) || empty($term['type']))
                 continue;
 
             $type = $term['type'];
